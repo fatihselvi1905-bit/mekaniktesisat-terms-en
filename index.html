@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MekanikHesap - Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0A0F1A;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #FF6A3D, #FF9A76);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .lang-btn {
+            display: flex;
+            background: #1C1C1E;
+            border-radius: 16px;
+            padding: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            border: 0.5px solid rgba(255, 255, 255, 0.06);
+            cursor: pointer;
+        }
+
+        .lang-option {
+            padding: 6px 14px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .lang-option.active {
+            background: #2A2A2C;
+            color: rgba(255, 255, 255, 0.9);
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #FF6A3D, #FF9A76);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 32px;
+        }
+
+        .card {
+            background: #131A2A;
+            border: 1px solid #1E2A3D;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .card h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #FF6A3D;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card h2 .icon { font-size: 18px; }
+
+        .card p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 8px;
+        }
+
+        .card p:last-child { margin-bottom: 0; }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 6px;
+            height: 6px;
+            background: #FF6A3D;
+            border-radius: 50%;
+        }
+
+        .highlight {
+            background: rgba(255, 106, 61, 0.08);
+            border: 1px solid rgba(255, 106, 61, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+        }
+
+        .highlight p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #1E2A3D;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: 4px;
+        }
+
+        .footer a {
+            color: #FF6A3D;
+            text-decoration: none;
+        }
+
+        .footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 480px) {
+            .container { padding: 24px 16px 60px; }
+            h1 { font-size: 24px; }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            .lang-btn { align-self: flex-end; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon">🔧</div>
+                <span class="logo-text">MekanikHesap</span>
+            </div>
+            <div class="lang-btn">
+                <button class="lang-option" onclick="setLang('tr')" id="btn-tr">TR</button>
+                <button class="lang-option active" onclick="setLang('en')" id="btn-en">EN</button>
+            </div>
+        </div>
+
+        <h1 id="title">Terms of Service</h1>
+        <p class="subtitle" id="update-date">Last updated: March 17, 2026</p>
+
+        <div class="highlight">
+            <p id="highlight-text">By using the MekanikHesap app, you agree to the following terms.</p>
+        </div>
+
+        <!-- 1. Genel -->
+        <div class="card">
+            <h2><span class="icon">📋</span> <span class="t" data-tr="Genel Kosullar" data-en="General Terms">Genel Kosullar</span></h2>
+            <p class="t" data-tr="MekanikHesap, mekanik tesisat muhendisleri icin gelistirilmis bir hesaplama aracidir. Uygulama yardimci bir arac olarak tasarlanmistir ve profesyonel muhendislik kararlarinin yerini almaz." data-en="MekanikHesap is a calculation tool developed for mechanical engineers. The app is designed as an assistive tool and does not replace professional engineering decisions.">MekanikHesap, mekanik tesisat muhendisleri icin gelistirilmis bir hesaplama aracidir. Uygulama yardimci bir arac olarak tasarlanmistir ve profesyonel muhendislik kararlarinin yerini almaz.</p>
+        </div>
+
+        <!-- 2. Abonelik -->
+        <div class="card">
+            <h2><span class="icon">⭐</span> <span class="t" data-tr="PRO Abonelik" data-en="PRO Subscription">PRO Abonelik</span></h2>
+            <p class="t" data-tr="MekanikHesap bazi gelismis modulleri PRO abonelik ile sunmaktadir:" data-en="MekanikHesap offers some advanced modules through PRO subscription:">MekanikHesap bazi gelismis modulleri PRO abonelik ile sunmaktadir:</p>
+            <ul>
+                <li class="t" data-tr="Haftalik: $4.99 USD / hafta" data-en="Weekly: $4.99 USD / week">Haftalik: $4.99 USD / hafta</li>
+                <li class="t" data-tr="Aylik: $9.99 USD / ay" data-en="Monthly: $9.99 USD / month">Aylik: $9.99 USD / ay</li>
+                <li class="t" data-tr="Yillik: $49.99 USD / yil" data-en="Yearly: $49.99 USD / year">Yillik: $49.99 USD / yil</li>
+            </ul>
+            <p class="t" style="margin-top: 12px;" data-tr="Abonelik Apple ID hesabiniz uzerinden faturalandirilir. Mevcut donem bitmeden en az 24 saat once iptal edilmezse otomatik olarak yenilenir." data-en="Subscription is billed through your Apple ID account. It automatically renews unless cancelled at least 24 hours before the end of the current period.">Abonelik Apple ID hesabiniz uzerinden faturalandirilir. Mevcut donem bitmeden en az 24 saat once iptal edilmezse otomatik olarak yenilenir.</p>
+        </div>
+
+        <!-- 3. Abonelik Yonetimi -->
+        <div class="card">
+            <h2><span class="icon">🔄</span> <span class="t" data-tr="Abonelik Yonetimi" data-en="Subscription Management">Abonelik Yonetimi</span></h2>
+            <ul>
+                <li class="t" data-tr="Aboneliginizi iOS Ayarlar > Apple ID > Abonelikler bolumunden yonetebilirsiniz" data-en="You can manage your subscription in iOS Settings > Apple ID > Subscriptions">Aboneliginizi iOS Ayarlar > Apple ID > Abonelikler bolumunden yonetebilirsiniz</li>
+                <li class="t" data-tr="Ucretsiz deneme suresi sunulmasi durumunda, kullanilmayan kisim satin alma ile birlikte sona erer" data-en="If a free trial period is offered, any unused portion will expire upon purchase">Ucretsiz deneme suresi sunulmasi durumunda, kullanilmayan kisim satin alma ile birlikte sona erer</li>
+                <li class="t" data-tr="Mevcut donem icinde iptal yapilirsa, donem sonuna kadar erisim devam eder" data-en="If cancelled within the current period, access continues until the end of the period">Mevcut donem icinde iptal yapilirsa, donem sonuna kadar erisim devam eder</li>
+                <li class="t" data-tr="Satin almalari 'Satin Alimlari Geri Yukle' secenegi ile geri yukleyebilirsiniz" data-en="You can restore purchases using the 'Restore Purchases' option">Satin almalari 'Satin Alimlari Geri Yukle' secenegi ile geri yukleyebilirsiniz</li>
+            </ul>
+        </div>
+
+        <!-- 4. Sorumluluk -->
+        <div class="card">
+            <h2><span class="icon">⚠️</span> <span class="t" data-tr="Sorumluluk Sinirlamasi" data-en="Limitation of Liability">Sorumluluk Sinirlamasi</span></h2>
+            <p class="t" data-tr="MekanikHesap hesaplama sonuclarini referans amacli sunar. Hesap sonuclari profesyonel muhendislik degerlendirmesi yerine gecmez. Uygulama kullanimi sonucu olusabilecek zararlardan gelistirici sorumlu tutulamaz." data-en="MekanikHesap provides calculation results for reference purposes. Results do not replace professional engineering assessment. The developer cannot be held liable for damages arising from use of the app.">MekanikHesap hesaplama sonuclarini referans amacli sunar. Hesap sonuclari profesyonel muhendislik degerlendirmesi yerine gecmez. Uygulama kullanimi sonucu olusabilecek zararlardan gelistirici sorumlu tutulamaz.</p>
+            <p class="t" style="margin-top: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);" data-tr="Burada yapilan tum hesaplar on bilgilendirme amacli verilmistir. Nihai hesap ve tasarimlar yetkili muhendisler tarafindan yapilmali ve degerlendirilmelidir. Buradaki hesaplardan uygulama ve uygulama gelistiricisi sorumlu tutulamaz." data-en="All calculations provided here are for preliminary information purposes only. Final calculations and designs must be made and evaluated by authorized engineers. The application and application developer cannot be held responsible for calculations made here.">Burada yapilan tum hesaplar on bilgilendirme amacli verilmistir. Nihai hesap ve tasarimlar yetkili muhendisler tarafindan yapilmali ve degerlendirilmelidir. Buradaki hesaplardan uygulama ve uygulama gelistiricisi sorumlu tutulamaz.</p>
+        </div>
+
+        <!-- 5. Standartlar -->
+        <div class="card">
+            <h2><span class="icon">📐</span> <span class="t" data-tr="Muhendislik Standartlari" data-en="Engineering Standards">Muhendislik Standartlari</span></h2>
+            <p class="t" data-tr="Hesaplamalar asagidaki uluslararasi standartlara dayalidir:" data-en="Calculations are based on the following international standards:">Hesaplamalar asagidaki uluslararasi standartlara dayalidir:</p>
+            <ul>
+                <li>NFPA 13, NFPA 20, NFPA 11</li>
+                <li>ASHRAE Handbook</li>
+                <li>EN 12845, EN 1825-2</li>
+                <li>DIN 2440, DIN 4705</li>
+                <li>ISO 14520</li>
+                <li>TS EN 671-2</li>
+            </ul>
+            <p class="t" style="margin-top: 12px;" data-tr="Standartlar referans amacli kullanilmistir. Guncel standart gereksinimleri icin ilgili standart kurulusuna basvurunuz." data-en="Standards are used for reference purposes. For current standard requirements, please consult the relevant standards organization.">Standartlar referans amacli kullanilmistir. Guncel standart gereksinimleri icin ilgili standart kurulusuna basvurunuz.</p>
+        </div>
+
+        <!-- 6. Fikri Mulkiyet -->
+        <div class="card">
+            <h2><span class="icon">©️</span> <span class="t" data-tr="Fikri Mulkiyet" data-en="Intellectual Property">Fikri Mulkiyet</span></h2>
+            <p class="t" data-tr="MekanikHesap uygulamasinin tum haklari saklidir. Uygulama icerigi, tasarimi ve hesaplama algoritmalari telif hakki ile korunmaktadir. Izinsiz kopyalama, dagitma veya tersine muhendislik yapilmasi yasaktir." data-en="All rights to MekanikHesap are reserved. App content, design, and calculation algorithms are protected by copyright. Unauthorized copying, distribution, or reverse engineering is prohibited.">MekanikHesap uygulamasinin tum haklari saklidir. Uygulama icerigi, tasarimi ve hesaplama algoritmalari telif hakki ile korunmaktadir. Izinsiz kopyalama, dagitma veya tersine muhendislik yapilmasi yasaktir.</p>
+        </div>
+
+        <!-- 7. Degisiklikler -->
+        <div class="card">
+            <h2><span class="icon">📝</span> <span class="t" data-tr="Kosul Degisiklikleri" data-en="Changes to Terms">Kosul Degisiklikleri</span></h2>
+            <p class="t" data-tr="Bu kullanim kosullari zaman zaman guncellenebilir. Onemli degisiklikler uygulama icinden bildirilecektir. Degisikliklerden sonra uygulamayi kullanmaya devam etmeniz, yeni kosullari kabul ettiginiz anlamina gelir." data-en="These terms of service may be updated from time to time. Significant changes will be notified within the app. Continued use of the app after changes constitutes acceptance of the new terms.">Bu kullanim kosullari zaman zaman guncellenebilir. Onemli degisiklikler uygulama icinden bildirilecektir. Degisikliklerden sonra uygulamayi kullanmaya devam etmeniz, yeni kosullari kabul ettiginiz anlamina gelir.</p>
+        </div>
+
+        <!-- 8. Iletisim -->
+        <div class="card">
+            <h2><span class="icon">📧</span> <span class="t" data-tr="Iletisim" data-en="Contact">Iletisim</span></h2>
+            <p class="t" data-tr="Kullanim kosullari hakkinda sorulariniz icin:" data-en="For questions about these terms of service:">Kullanim kosullari hakkinda sorulariniz icin:</p>
+            <p style="margin-top: 8px;"><strong>E-posta:</strong> <a href="mailto:fatih@selvi.org" style="color: #FF6A3D; text-decoration: none;">fatih@selvi.org</a></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 MekanikHesap</p>
+            <p class="t" data-tr="Mekanik tesisat muhendisleri icin profesyonel hesaplama araci" data-en="Professional calculation tool for mechanical engineers">Mekanik tesisat muhendisleri icin profesyonel hesaplama araci</p>
+            <p style="margin-top: 8px;"><a href="privacy-policy.html" class="t" data-tr="Gizlilik Politikasi" data-en="Privacy Policy">Gizlilik Politikasi</a></p>
+        </div>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('.t').forEach(function(el) {
+                var text = el.getAttribute('data-' + lang);
+                if (text) el.textContent = text;
+            });
+
+            document.getElementById('btn-tr').className = 'lang-option' + (lang === 'tr' ? ' active' : '');
+            document.getElementById('btn-en').className = 'lang-option' + (lang === 'en' ? ' active' : '');
+
+            document.documentElement.lang = lang;
+
+            document.getElementById('title').textContent =
+                lang === 'tr' ? 'Kullanim Kosullari' : 'Terms of Service';
+
+            document.getElementById('update-date').textContent =
+                lang === 'tr' ? 'Son guncelleme: 17 Mart 2026' : 'Last updated: March 17, 2026';
+
+            document.getElementById('highlight-text').textContent =
+                lang === 'tr'
+                    ? 'MekanikHesap uygulamasini kullanarak asagidaki kosullari kabul etmis olursunuz.'
+                    : 'By using the MekanikHesap app, you agree to the following terms.';
+        }
+    setLang("en");
+    </script>
+</body>
+</html>
